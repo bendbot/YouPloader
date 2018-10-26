@@ -8,20 +8,14 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
-    <version>0.9.4</version>
+    <version>0.9.5</version>
     <packaging>jar</packaging>
    	<scm>
-		<developerConnection>scm:git:git@github.com:becast/YouPloader.git</developerConnection>
-		<connection>scm:git:git://github.com/becast/YouPloader.git</connection>
-		<url>https://github.com/becast/YouPloader.git</url>
+		<developerConnection>scm:git:git@github.com:bendbot/YouPloader.git</developerConnection>
+		<connection>scm:git:git://github.com/bendbot/YouPloader.git</connection>
+		<url>https://github.com/bendbot/YouPloader.git</url>
 	</scm>
 
-	<!-- Build server -->
-	<ciManagement>
-		<system>jenkins</system>
-		<url>https://build.becast.at/job/YouPloader/</url>
-	</ciManagement>
-    
     <dependencies>
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
@@ -141,7 +135,7 @@
 			    </execution>
 			  </executions>
 			  <configuration>
-			    <doCheck>true</doCheck>
+			    <doCheck>false</doCheck>
 			    <doUpdate>false</doUpdate>
 			    <shortRevisionLength>7</shortRevisionLength>
 			  </configuration>
@@ -180,7 +174,7 @@
 	        <plugin>
             <groupId>com.akathist.maven.plugins.launch4j</groupId>
             <artifactId>launch4j-maven-plugin</artifactId>
-            <version>1.7.15</version>
+            <version>1.7.23</version>
             <executions>
                 <execution>
                     <id>l4j-clui</id>
