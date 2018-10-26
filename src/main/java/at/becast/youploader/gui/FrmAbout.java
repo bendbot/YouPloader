@@ -89,7 +89,7 @@ public class FrmAbout extends JDialog {
 		lblYouploader.setFont(new Font("Arial Black", Font.PLAIN, 11));
 		contentPanel.add(lblYouploader, "3, 2, left, default");
 
-		JLabel lblGenuineparts = new JLabel(" © 2016-2017 genuineparts");
+		JLabel lblGenuineparts = new JLabel(" © 2016-2018 BB");
 		lblGenuineparts.setFont(new Font("Arial Black", Font.PLAIN, 11));
 		contentPanel.add(lblGenuineparts, "3, 4, left, default");
 
@@ -101,11 +101,11 @@ public class FrmAbout extends JDialog {
 		lblBuild.setFont(new Font("Arial", Font.PLAIN, 13));
 		contentPanel.add(lblBuild, "3, 8");
 
-		JLabel lblHttpsgithubcombecastyouploader = new JLabel("https://github.com/becast/youploader");
+		JLabel lblHttpsgithubcombecastyouploader = new JLabel("https://github.com/bendbot/YouPloader");
 		lblHttpsgithubcombecastyouploader.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				DesktopUtil.openBrowser("https://github.com/becast/youploader");
+				DesktopUtil.openBrowser("https://github.com/bendbot/YouPloader");
 			}
 		});
 		lblHttpsgithubcombecastyouploader.setForeground(Color.BLUE);

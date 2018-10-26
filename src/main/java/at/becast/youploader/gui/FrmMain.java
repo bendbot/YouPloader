@@ -385,15 +385,17 @@ public class FrmMain extends JFrame implements IMainMenu {
 				FormSpecs.PARAGRAPH_GAP_ROWSPEC,
 				RowSpec.decode("24px"),
 				RowSpec.decode("23px"),}));
-		
-		JLabel lblEpisode = new JLabel("Episode:");
+
+		JLabel lblEpisode = new JLabel(LANG.getString("frmMain.Episode"));
+		//JLabel lblEpisode = new JLabel("Episode:");
 		panel.add(lblEpisode, "3, 6, left, default");
 		
 		txtEpisode = new JTextField();
 		panel.add(txtEpisode, "4, 6, 2, 1, fill, default");
 		txtEpisode.setColumns(10);
 		
-		chckbxTitleFromFilename = new JCheckBox("Title from Filename");
+		chckbxTitleFromFilename = new JCheckBox(LANG.getString("frmMain.TitleFromFilename"));
+		//chckbxTitleFromFilename = new JCheckBox("Title from Filename");
 		panel.add(chckbxTitleFromFilename, "11, 6, 6, 1");
 
 		lbltitlelenght = new JLabel("(0/100)");
@@ -786,9 +788,11 @@ public class FrmMain extends JFrame implements IMainMenu {
 		});
 		mnuBar.add(mnLanguage);
 
-		JMenu menu = new JMenu("?");
-		mnuBar.add(menu);
+		JMenu mnHelp = new JMenu(LANG.getString("frmMain.menu.Help"));
+		//JMenu menu = new JMenu("?");
+		mnuBar.add(mnHelp);
 
+		/**
 		JMenuItem mntmDonate = new JMenuItem(LANG.getString("frmMain.menu.Donate"));
 		menu.add(mntmDonate);
 		mntmDonate.addActionListener(new ActionListener() {
@@ -796,7 +800,8 @@ public class FrmMain extends JFrame implements IMainMenu {
 				donateButton();
 			}
 		});
-
+		*/
+		
 		JMenuItem mntmAbout = new JMenuItem(LANG.getString("frmMain.menu.About"));
 		mntmAbout.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent evt) {
@@ -804,7 +809,7 @@ public class FrmMain extends JFrame implements IMainMenu {
 				about.setVisible(true);
 			}
 		});
-		menu.add(mntmAbout);
+		mnHelp.add(mntmAbout);
 		
 		JMenuItem mntmShowLogfile = new JMenuItem(LANG.getString("frmMain.menu.ShowLogfile"));
 		mntmShowLogfile.addActionListener(new ActionListener() {
@@ -812,7 +817,7 @@ public class FrmMain extends JFrame implements IMainMenu {
 				DesktopUtil.openDir(new File(System.getProperty("user.home")+"/YouPloader"));
 			}
 		});
-		menu.add(mntmShowLogfile);
+		mnHelp.add(mntmShowLogfile);
 		
 		JMenuItem mntmUploadLogfile = new JMenuItem(LANG.getString("frmMain.menu.UploadLatestLogfile"));
 		mntmUploadLogfile.addActionListener(new ActionListener() {
@@ -820,10 +825,10 @@ public class FrmMain extends JFrame implements IMainMenu {
 				uploadLog();
 			}
 		});
-		menu.add(mntmUploadLogfile);
+		mnHelp.add(mntmUploadLogfile);
 		
 		chckbxmntmCheckForUpdates = new JCheckBoxMenuItem(LANG.getString("frmMain.menu.CheckforUpdates"));
-		menu.add(chckbxmntmCheckForUpdates);
+		mnHelp.add(chckbxmntmCheckForUpdates);
 		if(Main.s.setting.get("notify_updates").equals("1")){
 			chckbxmntmCheckForUpdates.setSelected(true);
 		}

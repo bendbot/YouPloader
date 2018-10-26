@@ -121,7 +121,7 @@ public class UpdateNotice extends JDialog implements ActionListener {
 				dlButton.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent arg0) {
 						if(updatefile.equals("null")){
-							DesktopUtil.openBrowser("https://github.com/becast/youploader/releases");
+							DesktopUtil.openBrowser("https://github.com/bendbot/YouPloader/releases");
 						}else{
 							SwingWorker<Void, Void> worker = new SwingWorker<Void, Void>() {
 								   @Override
@@ -199,7 +199,7 @@ public class UpdateNotice extends JDialog implements ActionListener {
         InputStream is = null;
         try {
             fl = new File(System.getProperty("user.dir") + File.separator +"update.zip");
-            dl = new URL("https://github.com/becast/YouPloader/releases/download/" + this.updatefile);
+            dl = new URL("https://github.com/bendbot/YouPloader/releases/download/" + this.updatefile);
             os = new FileOutputStream(fl);
             is = dl.openStream();
 
